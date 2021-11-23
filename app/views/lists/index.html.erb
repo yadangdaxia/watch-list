@@ -1,0 +1,16 @@
+<div class="container">
+  <h1> INDEX PAGE</h1>
+  <!-- Even though this page is index.html.erb, the url will be http://localhost:3000/lists/  -->
+  <h2> Movie Lists below</h2>
+    <div class="container mx-auto px-4">
+      <p>Movies here</p><%= @movies %>
+    </div>
+
+    <div class="container mx-auto px-4">
+      <p>Lists here</p><%= @lists %>
+      <% @lists.each do |list| %>
+        <li><%= list.name %><%= link_to "Edit (should go to edit but goes to new)", new_list_path %></li>
+      <% end %>
+    </div>
+
+</div>
