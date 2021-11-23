@@ -9,10 +9,16 @@ class ListsController < ApplicationController
   def new
     @list = List.new
   end
+
   def create
     @list = List.new(list_params)
-    @list.save
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
+
   def edit
     @list = List.find(params[:id])
   end
