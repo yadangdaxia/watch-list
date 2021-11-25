@@ -1,15 +1,24 @@
 <div class="container">
   <!-- Even though this page is index.html.erb, the url will be http://localhost:3000/lists/  -->
-  <h2> Movie Lists below</h2>
-    <div class="container mx-auto px-4">
-      <p>Movies here</p><%= @movies %>
-    </div>
 
-    <div class="container mx-auto px-4">
-      <p>Lists here</p><%= @lists %>
+  <h1>Movie Lists Below</h1>
+  <p>Movies here</p><%= @movies %>
+  <p>Lists here</p><%= @lists %>
+    <div class="list-group-container">
       <% @lists.each do |list| %>
-        <li><%= list.name %><%= link_to "Edit (should go to edit but goes to new)", new_list_path %></li>
+
+        <div class="card m-2 p-2" style="width: 250px">
+          <%= image_tag("movie.jpg")%>
+          <div class="card-body">
+            <h5 class="card-title"><%= list.name %></h5>
+            <button type="button" class="button">
+              <%= link_to "View", list_path(list.id) %>
+            </button>
+            <button type="button" class="button">
+              <%= link_to "Destroy", list_path(list.id), method: :delete %>
+            </button>
+          </div>
+        </div>
       <% end %>
     </div>
-
 </div>

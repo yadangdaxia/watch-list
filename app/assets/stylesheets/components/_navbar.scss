@@ -1,7 +1,14 @@
-body {
-   background-color: #FFC4E1;
+#navbar {
+   background-color: #F0E9D2;
+   text-decoration: none;
  }
- p {
-   color: red;
+
+ #navbar ul li a {
+ }
+
+  #navbar a {
+   color: #435a56;
+   font-style: bold;
+   text-decoration: none;
  }
 /* How to make this code override the bs code? */
