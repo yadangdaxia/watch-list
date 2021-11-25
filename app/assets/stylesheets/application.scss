@@ -9,6 +9,13 @@ body {
   background-color: $background-color;
 }
 
+#main-container {
+  margin: 60px auto 60px auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 // .content-container {
 //   background-color: #FFCA03;
 //   padding: 12px;

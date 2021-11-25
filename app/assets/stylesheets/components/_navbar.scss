@@ -1,13 +1,15 @@
 #navbar {
-   background-color: #F0E9D2;
-   text-decoration: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
  }
 
  #navbar ul li a {
  }
 
   #navbar a {
-   color: #435a56;
+   color: #404040;
    font-style: bold;
    text-decoration: none;
  }
